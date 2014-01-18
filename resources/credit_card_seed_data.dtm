@@ -1,0 +1,184 @@
+[
+;; US Dollar ;;;;;;;;;;;;;;;;;;;;;;;
+{:currency/name "U.S. Dollar (USD)"
+ :currency/symbol "$"
+ :db/id #db/id[:db.part/user -1]}
+
+;; Customers ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+{:customer/firstName "Johny" :customer/lastName "Flow" :db/id #db/id[:db.part/user -101]}
+{:customer/firstName "Raj" :customer/lastName "Jamnis" :db/id #db/id[:db.part/user -102]}
+{:customer/firstName "Andrew" :customer/lastName "Chung" :db/id #db/id[:db.part/user -103]}
+{:customer/firstName "Mike" :customer/lastName "Smith" :db/id #db/id[:db.part/user -104]}
+
+;; 10 Successful Transactions ;;;;
+;; 5 Successful Transactions for Johny Flow
+{:creditCardCharge/customer #db/id[:db.part/user -101]
+ :creditCardCharge/createdAt 1389883417601
+ :creditCardCharge/isPaid true
+ :creditCardCharge/isRefunded false
+ :creditCardCharge/amount 10011 ; 100.11
+ :creditCardCharge/currency #db/id[:db.part/user -1]
+ :creditCardCharge/status :creditCardCharge.status/succeeded
+ :db/id #db/id[:db.part/user -1001]}
+{:creditCardCharge/customer #db/id[:db.part/user -101]
+ :creditCardCharge/createdAt 1389883417601
+ :creditCardCharge/isPaid true
+ :creditCardCharge/isRefunded false
+ :creditCardCharge/amount 20022 ; 200.22
+ :creditCardCharge/currency #db/id[:db.part/user -1]
+ :creditCardCharge/status :creditCardCharge.status/succeeded
+ :db/id #db/id[:db.part/user -1002]}
+{:creditCardCharge/customer #db/id[:db.part/user -101]
+ :creditCardCharge/createdAt 1389883417601
+ :creditCardCharge/isPaid true
+ :creditCardCharge/isRefunded false
+ :creditCardCharge/amount 30033 ; 300.33
+ :creditCardCharge/currency #db/id[:db.part/user -1]
+ :creditCardCharge/status :creditCardCharge.status/succeeded
+ :db/id #db/id[:db.part/user -1003]}
+{:creditCardCharge/customer #db/id[:db.part/user -101]
+ :creditCardCharge/createdAt 1389883417601
+ :creditCardCharge/isPaid true
+ :creditCardCharge/isRefunded false
+ :creditCardCharge/amount 40044 ; 400.44
+ :creditCardCharge/currency #db/id[:db.part/user -1]
+ :creditCardCharge/status :creditCardCharge.status/succeeded
+ :db/id #db/id[:db.part/user -1004]}
+{:creditCardCharge/customer #db/id[:db.part/user -101]
+ :creditCardCharge/createdAt 1389883417601
+ :creditCardCharge/isPaid true
+ :creditCardCharge/isRefunded false
+ :creditCardCharge/amount 50055 ; 500.55
+ :creditCardCharge/currency #db/id[:db.part/user -1]
+ :creditCardCharge/status :creditCardCharge.status/succeeded
+ :db/id #db/id[:db.part/user -1005]}
+;; 3 Successful Transactions fort Raj Jamnis
+{:creditCardCharge/customer #db/id[:db.part/user -102]
+ :creditCardCharge/createdAt 1389883417601
+ :creditCardCharge/isPaid true
+ :creditCardCharge/isRefunded false
+ :creditCardCharge/amount 12345 ; 123.45
+ :creditCardCharge/currency #db/id[:db.part/user -1]
+ :creditCardCharge/status :creditCardCharge.status/succeeded
+ :db/id #db/id[:db.part/user -1006]}
+{:creditCardCharge/customer #db/id[:db.part/user -102]
+ :creditCardCharge/createdAt 1389883417601
+ :creditCardCharge/isPaid true
+ :creditCardCharge/isRefunded false
+ :creditCardCharge/amount 23456 ; 234.56
+ :creditCardCharge/currency #db/id[:db.part/user -1]
+ :creditCardCharge/status :creditCardCharge.status/succeeded
+ :db/id #db/id[:db.part/user -1007]}
+{:creditCardCharge/customer #db/id[:db.part/user -102]
+ :creditCardCharge/createdAt 1389883417601
+ :creditCardCharge/isPaid true
+ :creditCardCharge/isRefunded false
+ :creditCardCharge/amount 34567 ; 345.67
+ :creditCardCharge/currency #db/id[:db.part/user -1]
+ :creditCardCharge/status :creditCardCharge.status/succeeded
+ :db/id #db/id[:db.part/user -1008]}
+;; 1 Successful Transaction for Andrew Chung
+{:creditCardCharge/customer #db/id[:db.part/user -103]
+ :creditCardCharge/createdAt 1389883417601
+ :creditCardCharge/isPaid true
+ :creditCardCharge/isRefunded false
+ :creditCardCharge/amount 9999 ; 99.99
+ :creditCardCharge/currency #db/id[:db.part/user -1]
+ :creditCardCharge/status :creditCardCharge.status/succeeded
+ :db/id #db/id[:db.part/user -1009]}
+;; 1 Successful Transaction for Mike Smith
+{:creditCardCharge/customer #db/id[:db.part/user -104]
+ :creditCardCharge/createdAt 1389883417601
+ :creditCardCharge/isPaid true
+ :creditCardCharge/isRefunded false
+ :creditCardCharge/amount 999 ; 9.99
+ :creditCardCharge/currency #db/id[:db.part/user -1]
+ :creditCardCharge/status :creditCardCharge.status/succeeded
+ :db/id #db/id[:db.part/user -1010]}
+;; 5 Failed Transactions
+;; 3 Failed for Andrew Chung
+{:creditCardCharge/customer #db/id[:db.part/user -103]
+ :creditCardCharge/createdAt 1389883417601
+ :creditCardCharge/isPaid false
+ :creditCardCharge/isRefunded false
+ :creditCardCharge/amount 9988 ; 99.88
+ :creditCardCharge/currency #db/id[:db.part/user -1]
+ :creditCardCharge/status :creditCardCharge.status/failed
+ :db/id #db/id[:db.part/user -1011]}
+{:creditCardCharge/customer #db/id[:db.part/user -103]
+ :creditCardCharge/createdAt 1389883417601
+ :creditCardCharge/isPaid false
+ :creditCardCharge/isRefunded false
+ :creditCardCharge/amount 8888 ; 88.88
+ :creditCardCharge/currency #db/id[:db.part/user -1]
+ :creditCardCharge/status :creditCardCharge.status/failed
+ :db/id #db/id[:db.part/user -1012]}
+{:creditCardCharge/customer #db/id[:db.part/user -103]
+ :creditCardCharge/createdAt 1389883417601
+ :creditCardCharge/isPaid false
+ :creditCardCharge/isRefunded false
+ :creditCardCharge/amount 7777 ; 77.77
+ :creditCardCharge/currency #db/id[:db.part/user -1]
+ :creditCardCharge/status :creditCardCharge.status/failed
+ :db/id #db/id[:db.part/user -1013]}
+; 2 Failed for Mike Smith
+{:creditCardCharge/customer #db/id[:db.part/user -104]
+ :creditCardCharge/createdAt 1389883417601
+ :creditCardCharge/isPaid false
+ :creditCardCharge/isRefunded false
+ :creditCardCharge/amount 77 ; 0.77
+ :creditCardCharge/currency #db/id[:db.part/user -1]
+ :creditCardCharge/status :creditCardCharge.status/failed
+ :db/id #db/id[:db.part/user -1014]}
+{:creditCardCharge/customer #db/id[:db.part/user -104]
+ :creditCardCharge/createdAt 1389883417601
+ :creditCardCharge/isPaid false
+ :creditCardCharge/isRefunded false
+ :creditCardCharge/amount 499 ; 4.99
+ :creditCardCharge/currency #db/id[:db.part/user -1]
+ :creditCardCharge/status :creditCardCharge.status/failed
+ :db/id #db/id[:db.part/user -1015]}
+;; 5 Disputed Transactions
+;; 3 Disputed for Johny Flow
+{:creditCardCharge/customer #db/id[:db.part/user -101]
+ :creditCardCharge/createdAt 1389883417601
+ :creditCardCharge/isPaid false
+ :creditCardCharge/isRefunded false
+ :creditCardCharge/amount 499 ; 4.99
+ :creditCardCharge/currency #db/id[:db.part/user -1]
+ :creditCardCharge/status :creditCardCharge.status/disputed
+ :db/id #db/id[:db.part/user -1016]}
+{:creditCardCharge/customer #db/id[:db.part/user -101]
+ :creditCardCharge/createdAt 1389883417601
+ :creditCardCharge/isPaid false
+ :creditCardCharge/isRefunded false
+ :creditCardCharge/amount 399 ; 3.99
+ :creditCardCharge/currency #db/id[:db.part/user -1]
+ :creditCardCharge/status :creditCardCharge.status/disputed
+ :db/id #db/id[:db.part/user -1017]}
+{:creditCardCharge/customer #db/id[:db.part/user -101]
+ :creditCardCharge/createdAt 1389883417601
+ :creditCardCharge/isPaid false
+ :creditCardCharge/isRefunded false
+ :creditCardCharge/amount 299 ; 2.99
+ :creditCardCharge/currency #db/id[:db.part/user -1]
+ :creditCardCharge/status :creditCardCharge.status/disputed
+ :db/id #db/id[:db.part/user -1018]}
+;; 2 Disputed for Raj Jamnis
+{:creditCardCharge/customer #db/id[:db.part/user -102]
+ :creditCardCharge/createdAt 1389883417601
+ :creditCardCharge/isPaid false
+ :creditCardCharge/isRefunded false
+ :creditCardCharge/amount 199 ; 1.99
+ :creditCardCharge/currency #db/id[:db.part/user -1]
+ :creditCardCharge/status :creditCardCharge.status/disputed
+ :db/id #db/id[:db.part/user -1019]}
+{:creditCardCharge/customer #db/id[:db.part/user -102]
+ :creditCardCharge/createdAt 1389883417601
+ :creditCardCharge/isPaid false
+ :creditCardCharge/isRefunded false
+ :creditCardCharge/amount 99 ; 0.99
+ :creditCardCharge/currency #db/id[:db.part/user -1]
+ :creditCardCharge/status :creditCardCharge.status/disputed
+ :db/id #db/id[:db.part/user -1020]}
+]
