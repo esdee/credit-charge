@@ -1,6 +1,8 @@
 # credit-charge
 
 This is a Clojure version of the code challenge repo
+https://github.com/donnfelker/example-rails-challenge
+
 This challenge was blogged about by Donn Felkner
 http://www.donnfelker.com/how-to-hire-programmers/
 
